@@ -1,0 +1,131 @@
+.header {
+    margin: 50px 0 30px;
+}
+
+.header__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 79px;
+}
+
+.header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__nav-list-item a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #8C8A8A;
+}
+
+.toggle__menu {
+    font-size: 30px;
+    font-weight: 700;
+    color: #8C8A8A;
+    border: 4px solid #8C8A8A;
+    border-radius: 2px;
+    outline: none;
+    background: transparent;
+    padding: 0 7px;
+    position: relative;
+}
+
+.header__mob{
+    display: none;
+}
+
+.header__nav-list_mob {
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #8C8A8A;
+    padding: 60px 10px 10px;
+    border-radius: 0 0 0 2px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.header__nav-list_mob{
+    display: none;
+}
+
+.close__menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    outline: none;
+    background: transparent;
+    padding: 0 7px;
+}
+
+.header__nav-list-item_mob {
+    padding: 10px;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.header__nav-list-item_mob:hover{
+    background: #fff;
+}
+
+.header__nav-list-item-link_mob {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.header__nav-list-item_mob:hover .header__nav-list-item-link_mob{
+    color: #8C8A8A;
+}
+
+.toggle__menu:focus + .header__nav-list_mob{
+    display: block;
+}
+
+.close__menu:focus + .header__nav-list_mob{
+    display: none;
+}
+
+
+@media screen and (max-width:800px) {
+    .header{
+        margin: 15px 0 30px;
+    }
+    .header__wrap {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+    
+    .header__mob{
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px){
+    .header__logo{
+        width: 70px;
+    }
+    .header__logo img{
+        width: 100%;
+        height: 100%;
+    }
+}
